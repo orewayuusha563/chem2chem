@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  product_id: MyString
+  name: MyString
+  casno: MyString
+  formula: MyString
+  mweight: 9.99
+  structure: MyText
+
+two:
+  product_id: MyString
+  name: MyString
+  casno: MyString
+  formula: MyString
+  mweight: 9.99
+  structure: MyText

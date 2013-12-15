@@ -1,0 +1,37 @@
+
+
+
+    <%= form_for "/ssearch" do %>
+        <div  align="center">
+          <div class="row">
+          <div class="large-11 columns">
+            <%= text_field_tag :search ,nil,class:"inline",placeholder: 'Search by CAS No.or Chemistry Name...' %>
+          </div>
+          <div class="large-1 column">
+            <%= submit_tag "Search",class:"button radius" %>
+        </div>
+                </div>
+     <% end %>
+
+  <div class="row" >
+  <% @compounds.each do |compound| %>
+      <div class="large-4 columns left"   >
+         <div class="panel" style="height:500px">
+        <%= link_to(image_tag(get_image_url(compound.cas),width:"200px",height:"200px",alt:"Sorry, image of #{compound.cas} is not existed."),:controller=>'cas',:action=>'display',:id=>compound.cas) %><br/>
+
+          <b>Name:</b>
+          <%= link_to(compound.name,:controller=>'cas',:action=>'name',:id=>compound.name) %></br>
+          <b>CAS No:    </b>
+          <%= link_to(compound.cas,:controller=>'cas',:action=>'display',:id=>compound.cas) %></br>
+           <div>
+          <%= link_to "More Detail..",:controller=>'cas',:action=>'display',:id=>compound.cas %>
+            </div>
+
+     </div>
+      </div>
+  <% end %>
+  </div>
+
+<%= paginate @compounds %>
+
+

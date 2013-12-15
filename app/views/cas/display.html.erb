@@ -1,0 +1,52 @@
+<p id="notice"><%= notice %></p>
+<div class="row">
+<div  class="large-12 columns">
+<div class="large-6 small-6 columns">
+  <%= image_tag(get_image_url(@compound.cas),width:"200px",height:"200px") %>
+</div>
+<div class="large-6 small-6 columns">
+<h3>Basic Infomation</h3>
+<p>
+  <b>Catalog No.:</b>
+  <%= @compound.compound_id %>
+</p>
+
+<p>
+  <b>Product Name:</b>
+  <%= @compound.name %>
+</p>
+
+<p>
+  <b>CAS Number:</b>
+  <%= @compound.cas %>
+</p>
+
+<p>
+  <b>Molecular Formula:</b>
+  <%= @compound.mf %>
+</p>
+
+<p>
+  <b>Molecular Weight:</b>
+  <%= @compound.mw %>
+</p>
+</div>
+</div>
+
+<% if 1.nil? %>
+<div class="row">
+    <div class="large-12 columns">
+          <h3>Drug Master File:</h3>
+          DMF Details Information...
+    </div>
+</div>
+  <div class="row">
+    <div class="large-12 columns">
+      <h3>Supplier:</h3>
+    </div>
+  </div>
+<% end %>
+
+</div>
+
+

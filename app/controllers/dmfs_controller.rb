@@ -1,0 +1,4 @@
+class DmfsController < ApplicationController
+
+
+end

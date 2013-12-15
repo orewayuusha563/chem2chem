@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  dmfno: MyString
+  status: MyString
+  type: 
+  sumbmit_date: 2013-08-03
+  holder: MyString
+  subject: MyString
+  details: MyText
+  compound_id: 1
+
+two:
+  dmfno: MyString
+  status: MyString
+  type: 
+  sumbmit_date: 2013-08-03
+  holder: MyString
+  subject: MyString
+  details: MyText
+  compound_id: 1

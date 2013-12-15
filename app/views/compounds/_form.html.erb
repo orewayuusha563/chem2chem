@@ -1,0 +1,45 @@
+<%= form_for(@compound) do |f| %>
+  <% if @compound.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@compound.errors.count, "error") %> prohibited this compound from being saved:</h2>
+
+      <ul>
+      <% @compound.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :compound_id %><br />
+    <%= f.text_field :compound_id %>
+  </div>
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_area :name %>
+  </div>
+  <div class="field">
+    <%= f.label :cas %><br />
+    <%= f.text_field :cas %>
+  </div>
+  <div class="field">
+    <%= f.label :mf %><br />
+    <%= f.text_area :mf %>
+  </div>
+  <div class="field">
+    <%= f.label :mw %><br />
+    <%= f.text_field :mw %>
+  </div>
+  <div class="field">
+    <%= f.label :structure %><br />
+    <%= f.text_area :structure %>
+  </div>
+  <div class="field">
+    <%= f.label :source %><br />
+    <%= f.text_field :source %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

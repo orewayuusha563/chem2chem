@@ -1,0 +1,35 @@
+<h1>Compounds List</h1>
+
+<table>
+  <tr>
+    <th>Compound_id</th>
+    <th>Name</th>
+    <th>CAS</th>
+    <th>Molecular Formula</th>
+    <th>Molecular Weight</th>
+    <th>Structure</th>
+    <th>Source</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+  <% @compounds.each do |compound| %>
+      <tr>
+        <td><%= compound.compound_id %></td>
+        <td><%= compound.name %></td>
+        <td><%= compound.cas %></td>
+        <td><%= compound.mf %></td>
+        <td><%= compound.mw %></td>
+        <td><%= compound.structure %></td>
+        <td><%= compound.source %></td>
+        <td><%= link_to 'Show', compound %></td>
+        <td><%= link_to 'Edit', edit_compound_path(compound) %></td>
+        <td><%= link_to 'Destroy', compound, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+  <% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Compound', new_compound_path %>

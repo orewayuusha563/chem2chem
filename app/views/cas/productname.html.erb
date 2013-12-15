@@ -1,0 +1,41 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Compound:</b>
+  <%= @compound.compound_id %>
+</p>
+
+<p>
+  <b>Name:</b>
+  <%= @compound.name %>
+</p>
+
+<p>
+  <b>CAS:</b>
+  <%= @compound.cas %>
+</p>
+
+<p>
+  <b>Molecular Formula:</b>
+  <%= @compound.mf %>
+</p>
+
+<p>
+  <b>Molecular Weight:</b>
+  <%= @compound.mw %>
+</p>
+
+<p>
+  <b>Structure:</b>
+  <%= image_tag(get_image_url(@compound.cas)) %>
+</p>
+
+<p>
+  <b>Source:</b>
+  <%= @compound.source %>
+</p>
+
+
+<%= link_to 'Edit', edit_compound_path(@compound) %> |
+<%= link_to 'List', compounds_path %>|
+<%= link_to_function 'Back', "history.go(-1)" %>

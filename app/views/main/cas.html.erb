@@ -1,0 +1,30 @@
+
+
+  <div class="row" >
+    <% @compounds.each do |compound| %>
+        <div class="small-8 columns left my-alert-class"   >
+
+          <%= link_to(image_tag("noimage.png"),compound) %><br/>
+          <%= link_to(compound.compound_id,compound) %><br/>
+
+
+          <b>Name:</b>
+          <%= link_to(compound.name,compound) %></br>
+          <b>CAS No:    </b>
+          <%= compound.cas %></br>
+          <b>Formula:</b>
+          <%= compound.mf %></br>
+          <b>Weight: </b>
+          <%= compound.mw %></br>
+
+          <b>DMF:</b>
+          <%= compound.get_dmf(compound) %><br/>
+          <b>In Stock:</b>
+          <%= compound.mf %><br/>
+          <b>Supplier:</b>
+          <%= compound.mw %><br/><br/>
+        </div>
+    <% end %>
+  </div>
+
+

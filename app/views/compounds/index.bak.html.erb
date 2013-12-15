@@ -1,0 +1,20 @@
+<h1>Compounds</h1>
+
+<table id="compounds" class="display" data-source="<%= compounds_url(format: "json") %>">
+  <thead>
+  <tr>
+    <th>Name</th>
+    <th>CAS</th>
+    <th>Molecular Formula</th>
+    <th>Molecular Weight</th>
+    <th>Structure</th>
+    <th>Source</th>
+  </tr>
+  </thead>
+  <tbody>
+  </tbody>
+</table>
+
+<br />
+
+<%= link_to 'New Compound', new_compound_path,class:"button radius" %>
